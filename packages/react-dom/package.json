@@ -1,11 +1,11 @@
 {
-  "name": "react-dom",
+  "name": "hippy-ssr-react-dom",
   "version": "17.0.0",
   "description": "React package for working with the DOM.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/react.git",
+    "url": "https://github.com/linjinze999/react/tree/17.0.2-style",
     "directory": "packages/react-dom"
   },
   "keywords": [
