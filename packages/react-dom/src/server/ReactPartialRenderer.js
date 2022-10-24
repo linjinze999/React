@@ -226,7 +226,7 @@ const processStyleName = function(styleName) {
 function createMarkupForStyles(styles): string | null {
   if (Array.isArray(styles)) {
     return styles.map(style => {
-      return createDangerousStringForStyles(style);
+      return createMarkupForStyles(style);
     }).filter(v => v).join(';') || null;
   }
   let serialized = '';
