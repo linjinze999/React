@@ -5,8 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import isArray from 'shared/isArray';
-
 import {shorthandToLonghand} from './CSSShorthandProperty';
 
 import dangerousStyleValue from './dangerousStyleValue';
@@ -27,7 +25,7 @@ export function createDangerousStringForStyles(styles) {
   if (__DEV__) {
     let serialized = '';
     let delimiter = '';
-    if (isArray(styles)) {
+    if (Array.isArray(styles)) {
       serialized += styles.map(style => {
         return createDangerousStringForStyles(style);
       }).filter(v => v).join(';');
@@ -65,7 +63,7 @@ export function createDangerousStringForStyles(styles) {
  * @param {object} styles
  */
 export function setValueForStyles(node, styles) {
-  if (isArray(styles)) {
+  if (Array.isArray(styles)) {
     styles.forEach(style => {
       setValueForStyles(node, style);
     });
